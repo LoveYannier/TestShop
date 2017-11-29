@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.tarena.ht.mapper.ModuleMapper">
+
+	<!-- 新增模块 -->
+	<insert id="saveModule">
+		insert into module_p(module_id,name,parent_id,remark,ctype,order_no,create_time) values(
+			#{moduleId},
+			#{name},
+			#{parent.moduleId},
+			#{remark},
+			#{ctype},
+			#{orderNo},
+			#{createTime,jdbcType=VARCHAR}
+		)
+	</insert>
+	
+	<!-- 查看权限模块 -->
+	<select id="getModuleOneById" resultMap="moduleRM">
+		select * from module_p m
+	    left join 
+	    (select m.module_id as pm_id,m.name as parent_name from module_p m) p
+	    on m.parent_id = p.pm_id		
+		where module_id = #{moduleId}
+	</select>
+	
+
+</mapper>
