@@ -26,7 +26,7 @@
 	<context:component-scan base-package="com.jt" />
 
 	<!-- 定义数据源，使用自己实现的数据源 -->
-	<bean id="dataSource" class="com.jt.manage.datasource.DynamicDataSource">
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.lookup">
 		<!-- 设置多个数据源 -->
 		<property name="targetDataSources">
 			<map key-type="java.lang.String">

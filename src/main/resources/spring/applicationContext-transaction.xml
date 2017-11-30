@@ -32,7 +32,7 @@
 	</tx:advice>
 	
 	<!-- 定义AOP切面处理器 -->
-	<bean class="com.jt.manage.datasource.DataSourceAspect" id="dataSourceAspect" />
+	<bean class="cn.tarena.ht.tools.DataSourceAspect" id="dataSourceAspect" />
 
 	<aop:config>
 		<!-- 定义切面，所有的service的所有方法 -->

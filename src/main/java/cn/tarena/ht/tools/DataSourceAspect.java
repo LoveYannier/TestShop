@@ -1,4 +1,4 @@
-package tools;
+package cn.tarena.ht.tools;
 
 import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.JoinPoint;

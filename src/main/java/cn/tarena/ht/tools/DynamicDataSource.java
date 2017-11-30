@@ -1,4 +1,4 @@
-package tools;
+package cn.tarena.ht.tools;
 
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 

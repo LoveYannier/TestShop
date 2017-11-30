@@ -1,4 +1,4 @@
-package tools;
+package cn.tarena.ht.tools;
 
 public class DynamicDataSourceHolder {
 	// 写库对应的数据源key
